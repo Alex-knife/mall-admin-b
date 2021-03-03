@@ -18,7 +18,7 @@
         {{$store.state.user.username}}
         <a-icon type="down" />
       </li>
-      <li>Log Out</li>
+      <li @click="logout">Log Out</li>
     </ul>
   </div>
 </template>
@@ -32,6 +32,12 @@ export default {
   methods: {
     toggleCollapsed() {
       this.$store.dispatch('changeCollapsed');
+    },
+    logout() {
+      this.$store.dispatch('logout');
+      this.$router.push({
+        name: 'Login',
+      });
     },
   },
 };
