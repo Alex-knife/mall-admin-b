@@ -15,7 +15,7 @@
     </div>
     <ul class="user-info">
       <li>
-        Welcome,Alex
+        {{$store.state.user.username}}
         <a-icon type="down" />
       </li>
       <li>Log Out</li>
