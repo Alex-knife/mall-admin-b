@@ -5,6 +5,8 @@ const roleForRoute = {
     name: 'ProductList',
   }, {
     name: 'ProductAdd',
+  }, {
+    name: 'ProductEdit',
   }],
   admin: [{
     name: 'Product',
@@ -14,6 +16,8 @@ const roleForRoute = {
     name: 'ProductAdd',
   }, {
     name: 'Category',
+  }, {
+    name: 'ProductEdit',
   }],
 };
 

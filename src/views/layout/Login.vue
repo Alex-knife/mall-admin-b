@@ -71,7 +71,6 @@ export default {
         if (valid) {
           // 传入数据
           api.login(this.loginForm).then((res) => {
-            console.log(res);
             this.$store.dispatch('setUserInfo', res);
             // 页面跳转
             this.$router.push({

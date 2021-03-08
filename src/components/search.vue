@@ -20,7 +20,7 @@
         >
           <a-select-option
             v-for="c in data"
-            :key="c._id"
+            :key="c.id"
             :value="c.id"
             >{{ c.name }}</a-select-option
           >
@@ -42,13 +42,12 @@ export default {
         searchWord: '',
         category: '',
       },
-      categoryList: [],
     };
   },
   props: ['data'],
   methods: {
     handleSubmit() {
-      this.$emit('submit', this.sea);
+      this.$emit('submit', this.searchForm);
     },
     handleChange(val) {
       this.searchForm.category = val;

@@ -10,12 +10,12 @@ Vue.use(VueRouter);
 const asyncRoutes = [{
   path: '/product',
   name: 'Product',
-  component: Home,
   meta: {
     title: '商品',
     hidden: false,
     icon: 'shopping-cart',
   },
+  component: Home,
   children: [
     {
       path: 'list',
@@ -46,6 +46,16 @@ const asyncRoutes = [{
         icon: 'container',
       },
       component: () => import('@/views/pages/category.vue'),
+    },
+    {
+      path: 'edit/:id',
+      name: 'ProductEdit',
+      meta: {
+        title: '商品编辑',
+        hidden: true,
+        icon: 'container',
+      },
+      component: () => import('@/views/pages/productAdd.vue'),
     },
   ],
 },

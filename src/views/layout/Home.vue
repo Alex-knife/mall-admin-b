@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <!-- 左侧菜单栏 -->
-    <left-menu />
-    <div :class="{ 'main-app': true, 'menu-unfold': $store.state.collapsed }">
+    <left-menu :key="key"></left-menu>
+    <div :class="{ 'main-app': true, 'extend-app': $store.state.collapsed }">
       <!-- 右侧顶端部分 -->
       <right-header />
       <!-- 右侧子路由信息 -->
@@ -18,7 +18,13 @@ import RightHeader from './components/header.vue';
 export default {
   data() {
     return {
+      key: new Date().getTime(),
     };
+  },
+  watch: {
+    $route() {
+      this.key = new Date().getTime();
+    },
   },
   components: {
     LeftMenu,
@@ -27,3 +33,7 @@ export default {
   methods: {},
 };
 </script>
+
+<style lang="less">
+  @import url("~@/assets/css/home.less");
+</style>
