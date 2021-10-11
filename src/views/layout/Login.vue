@@ -8,7 +8,7 @@
       v-bind="layout"
     >
       <a-form-model-item has-feedback label="Email" prop="email">
-        <a-input v-model="loginForm.email" />
+        <a-input v-model="loginForm.email" default-value="123"/>
       </a-form-model-item>
       <a-form-model-item has-feedback label="Password" prop="password">
         <a-input
@@ -52,8 +52,8 @@ export default {
     };
     return {
       loginForm: {
-        email: '',
-        password: '',
+        email: '1173683665@qq.com',
+        password: 'fge365849',
       },
       rules: {
         email: [{ validator: checkEmail, trigger: 'change' }],

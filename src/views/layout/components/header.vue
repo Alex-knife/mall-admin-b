@@ -72,5 +72,9 @@ export default {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 999;
+  li:nth-child(2){
+    background: #eee
+  }
 }
 </style>
